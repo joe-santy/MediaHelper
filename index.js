@@ -39,7 +39,7 @@ const youtubedl = require('youtube-dl');
     }
     if (answer.choices == "view photos"){
       try {
-        process.chdir("RedditDownloader/images");
+        process.chdir("MediaHelper/images");
         cp.exec("feh -z -F -D 5");
         prompt();
       } catch (err){
@@ -70,7 +70,7 @@ const youtubedl = require('youtube-dl');
     }
     if (answer.choices == "play videos"){
       try {
-        process.chdir("RedditDownloader/videos");
+        process.chdir("MediaHelper/videos");
         fse.readdir(process.cwd(), function(err, items){
           if (err){
             console.error(err);
@@ -88,7 +88,7 @@ const youtubedl = require('youtube-dl');
       }
     }
     if (answer.choices == "exit"){
-      return "Thanks for using RedditDownloader."
+      return "Thanks for using MediaHelper."
     }
   });
 
